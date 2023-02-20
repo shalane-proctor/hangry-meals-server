@@ -1,0 +1,44 @@
+[
+  {
+    "model": "hangrymealsapi.week",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "monday": 1,
+      "tuesday": 2,
+      "wednesday": 3,
+      "thursday": 2,
+      "friday": 3,
+      "saturday": 1,
+      "sunday": 4
+    }
+  },
+  {
+    "model": "hangrymealsapi.week",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "monday": 1,
+      "tuesday": 2,
+      "wednesday": 3,
+      "thursday": 2,
+      "friday": 3,
+      "saturday": 1,
+      "sunday": 4
+    }
+  },
+  {
+    "model": "hangrymealsapi.week",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "monday": 1,
+      "tuesday": 2,
+      "wednesday": 3,
+      "thursday": 2,
+      "friday": 3,
+      "saturday": 1,
+      "sunday": 4
+    }
+  }
+]

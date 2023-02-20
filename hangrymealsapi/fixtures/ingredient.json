@@ -1,0 +1,29 @@
+[
+  {
+    "model": "hangrymealsapi.ingredient",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "name": "Bell Pepper",
+      "in_stock": true
+    }
+  },
+  {
+    "model": "hangrymealsapi.ingredient",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "name": "Onions",
+      "in_stock": false
+    }
+  },
+  {
+    "model": "hangrymealsapi.ingredient",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "name": "Mushrooms",
+      "in_stock": true
+    }
+  }
+]

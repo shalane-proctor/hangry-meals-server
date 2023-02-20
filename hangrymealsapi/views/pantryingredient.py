@@ -17,7 +17,7 @@ class PantryIngredientSerializer(serializers.ModelSerializer):
         depth = 2
 
 
-class RecipeIngredientsView(ViewSet):
+class PantryIngredientsView(ViewSet):
 
     def retrieve(self, request, pk):
         pantryingredient = PantryIngredient.objects.get(pk=pk)
@@ -59,11 +59,3 @@ class RecipeIngredientsView(ViewSet):
         pantryingredient = PantryIngredient.objects.get(pk=pk)
         pantryingredient.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
-
-
-class UserPantryIngredientsView(generics.ListCreateAPIView):
-    serializer_class = PantryIngredientSerializer
-
-    def get_queryset(self):
-        user_id = self.kwargs['user_id']
-        return Pantry.objects.filter(pantry__user__id=user_id)

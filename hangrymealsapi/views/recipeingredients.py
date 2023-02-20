@@ -61,16 +61,7 @@ class RecipeIngredientsView(ViewSet):
         recipeingredients.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
-
-class UserRecipeIngredientsView(generics.ListCreateAPIView):
-    serializer_class = RecipeIngredientsSerializer
-
-    def get_queryset(self):
-        user_id = self.kwargs['user_id']
-        return Recipe.objects.filter(recipe__user__id=user_id)
-
-
-class ByingredientRecipeIngredientsView(generics.ListCreateAPIView):
+class ByRecipeIngredientsView(generics.ListCreateAPIView):
     serializer_class = RecipeIngredientsSerializer
 
     def get_queryset(self):

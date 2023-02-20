@@ -1,0 +1,26 @@
+[
+  {
+    "model": "hangrymealsapi.pantryingredient",
+    "pk": 1,
+    "fields": {
+      "pantry": 1,
+      "ingredient": 1
+    }
+  },
+  {
+    "model": "hangrymealsapi.pantryingredient",
+    "pk": 2,
+    "fields": {
+      "pantry": 1,
+      "ingredient": 2
+    }
+  },
+  {
+    "model": "hangrymealsapi.pantryingredient",
+    "pk": 3,
+    "fields": {
+      "pantry": 1,
+      "ingredient": 3
+    }
+  }
+]

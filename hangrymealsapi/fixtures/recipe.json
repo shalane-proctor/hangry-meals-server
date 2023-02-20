@@ -1,0 +1,38 @@
+[
+  {
+    "model": "hangrymealsapi.recipe",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "name": "Order in or go out to eat!",
+      "instructions": "Pick a place!"
+    }
+  },
+  {
+    "model": "hangrymealsapi.recipe",
+    "pk": 4,
+    "fields": {
+      "user": 1,
+      "name": "Chili",
+      "instructions": "Add the olive oil to a large soup pot and place it over medium-high heat for two minutes. Add the onion. Cook for 5 minutes, stirring occasionally. Add the ground beef to the pot. Break it apart with a wooden spoon. Cook for 6-7 minutes, until the beef is browned, stirring occasionally. Add the chili powder, cumin, sugar, tomato paste, garlic powder, salt, pepper, and optional cayenne. Stir until well combined. Add the broth, diced tomatoes (with their juice), drained beans, and tomato sauce. Stir well. Bring the liquid to a low boil. Then, reduce the heat (low to medium-low) to gently simmer the chili, uncovered, for 20-25 minutes, stirring occasionally. Remove the pot from the heat. Let the chili rest for 5-10 minutes before serving."
+    }
+  },
+  {
+    "model": "hangrymealsapi.recipe",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "name": "Spaghetti",
+      "instructions": "MAKE SAUCE: Heat the oil in a large pot over medium-high heat (we use a Dutch oven). Add the meat and cook until browned, about 8 minutes. As the meat cooks, use a wooden spoon to break it up into smaller crumbles. Add the onions and cook, stirring every once and a while, until softened, about 5 minutes. Stir in the garlic, tomato paste, oregano, and red pepper flakes and cook, stirring continuously for about 1 minute. Pour in the water and use a wooden spoon to scrape up any bits of meat or onion stuck to the bottom of the pot. Stir in the tomatoes, 3/4 teaspoon of salt, and a generous pinch of black pepper. Bring the sauce to a low simmer. Cook, uncovered, at a low simmer for 25 minutes. As it cooks, stir and taste the sauce a few times so you can adjust the seasoning accordingly (see notes for suggestions). COOK SPAGHETTI: About 15 minutes before the sauce finishes cooking, bring a large pot of salted water to the boil, and then cook pasta according to package directions, but check for doneness a minute or two before the suggested cooking time. TO FINISH: Take the sauce off of the heat, and then stir in the basil. Toss in the cooked pasta, and then leave for a minute so that the pasta absorbs some of the sauce. Toss again, and then serve with parmesan sprinkled on top."
+    }
+  },
+  {
+    "model": "hangrymealsapi.recipe",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "name": "Hamburgers",
+      "instructions": "Set out a large mixing bowl. Add in the ground beef, crushed crackers, egg, Worcestershire sauce, milk, salt, garlic powder, onion powder, and pepper. Mix by hand until the meat mixture is smooth, but stop once the mixture looks even. (Overmixing can create a dense heavy texture.) Press the meat down in the bowl, into an even disk. Use a knife to cut and divide the hamburger patty mixture into 6 1/3 pound grill or skillet patties, or 12 thin griddle patties. Set out a baking sheet, lined with wax paper or foil, to hold the patties. One at a time, gather the patty mix and press firmly into patties. Shape them just slightly larger than the buns you plan to use, to account for shrinkage during cooking. Set the patties on the baking sheet. Use a spoon to press a dent in the center of each patty so they don't puff up as they cook. If you need to stack the patties separate them with a sheet of wax paper. Preheat the grill or a skillet to medium heat. (Approximately 350-400 degrees F.) For thick patties: Grill or fry the patties for 3-4 minutes per side. For thin patties: Cook on the griddle for 2 minutes per side. Stack the hot patties on hamburgers buns, and top with your favorite hamburgers toppings. Serve warm."
+    }
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "model": "hangrymealsapi.user",
+    "pk": 1,
+    "fields": {
+      "uid": "15654sdfdf",
+      "username": "purplepariah"
+    }
+  }
+]

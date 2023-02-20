@@ -13,9 +13,38 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from rest_framework import routers
+from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
+from hangrymealsapi.views import check_user, register_user, UserView, IngredientView, UserIngredientView, PantryView, UserPantryView, PantryIngredientsView, RecipeIngredientsView, RecipeView, UserRecipeView, WeekView, UserWeekView, ByRecipeIngredientsView
+
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'user', UserView, 'user')
+router.register(r'ingredient', IngredientView, 'ingredient')
+router.register(r'pantry', PantryView, 'pantry')
+router.register(r'pantryingredient', PantryIngredientsView, 'pantryingredient')
+router.register(r'recipeingredients', RecipeIngredientsView, 'recipeingredients')
+router.register(r'recipe', RecipeView, 'recipe')
+router.register(r'week', WeekView, 'week')
 
 urlpatterns = [
+    path('register', register_user),
+    path('checkuser', check_user),
     path('admin/', admin.site.urls),
+    path('', include(router.urls)),
+    path('user-ingredient/<int:user_id>/',
+         UserIngredientView.as_view(), name='user'),
+
+    path('user-pantry/<int:user_id>/',
+         UserPantryView.as_view(), name='user'),
+
+    path('user-recipe/<int:user_id>/',
+         UserRecipeView.as_view(), name='user'),
+
+    path('user-week/<int:user_id>/',
+         UserWeekView.as_view(), name='user'),
+    
+    path('recipe-ingredients/<int:ingredient_id>/',
+         ByRecipeIngredientsView.as_view(), name='ingredient'),
 ]

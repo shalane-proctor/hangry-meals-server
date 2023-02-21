@@ -44,9 +44,9 @@ class RecipeView(ViewSet):
     def update(self, request, pk):
         recipe = Recipe.objects.get(pk=pk)
         user = User.objects.get(uid=request.data["user"])
-        Recipe.user = user
-        Recipe.name = request.data["name"]
-        Recipe.instructions = request.data["instructions"]
+        recipe.user = user
+        recipe.name = request.data["name"]
+        recipe.instructions = request.data["instructions"]
         recipe.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)

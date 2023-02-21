@@ -69,13 +69,13 @@ class WeekView(ViewSet):
         saturday = Recipe.objects.get(pk=request.data["saturday"])
         sunday = Recipe.objects.get(pk=request.data["sunday"])
         week.user = user
-        week.monday = monday,
-        week.tuesday = tuesday,
-        week.wednesday = wednesday,
-        week.thursday = thursday,
-        week.friday = friday,
-        week.saturday = saturday,
-        week.sunday = sunday,
+        week.monday = monday
+        week.tuesday = tuesday
+        week.wednesday = wednesday
+        week.thursday = thursday
+        week.friday = friday
+        week.saturday = saturday
+        week.sunday = sunday
         week.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)

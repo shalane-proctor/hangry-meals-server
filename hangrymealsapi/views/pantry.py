@@ -14,6 +14,7 @@ class PantrySerializer(serializers.ModelSerializer):
     class Meta:
         model = Pantry
         fields = ('id', 'user')
+        depth = 1
 
 class PantryView(ViewSet):
 
@@ -41,7 +42,7 @@ class PantryView(ViewSet):
     def update(self, request, pk):
         pantry = Pantry.objects.get(pk=pk)
         user = User.objects.get(uid=request.data["user"])
-        Pantry.user = user
+        pantry.user = user
         pantry.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)

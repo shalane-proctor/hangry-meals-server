@@ -7,6 +7,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from rest_framework import generics
+from django.views.generic import ListView
 from hangrymealsapi.models import RecipeIngredients, Recipe, Ingredient
 
 
@@ -60,10 +61,11 @@ class RecipeIngredientsView(ViewSet):
         recipeingredients = RecipeIngredients.objects.get(pk=pk)
         recipeingredients.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
-
-class ByRecipeIngredientsView(generics.ListCreateAPIView):
-    serializer_class = RecipeIngredientsSerializer
-
+class ByRecipeIngredientsView(ListView):
+    model = Ingredient
+    template_name = 'ingredient_list.html'
     def get_queryset(self):
-        ingredient_id = self.kwargs['ingredient_id']
-        return RecipeIngredients.objects.filter(ingredient__id=ingredient_id)
+        recipe_id = self.kwargs['recipe_id']
+        recipe_ingredients = RecipeIngredients.objects.filter(
+            recipe_id=recipe_id)
+        return Ingredient.objects.filter(id__in=recipe_ingredients.values('ingredient_id'))

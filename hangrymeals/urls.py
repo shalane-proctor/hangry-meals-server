@@ -45,6 +45,6 @@ urlpatterns = [
     path('user-week/<int:user_id>/',
          UserWeekView.as_view(), name='user'),
     
-    path('recipe-ingredients/<int:ingredient_id>/',
-         ByRecipeIngredientsView.as_view(), name='ingredient'),
+    path('recipe-ingredients/<int:recipe_id>/',
+         ByRecipeIngredientsView.as_view(), name='recipe'),
 ]

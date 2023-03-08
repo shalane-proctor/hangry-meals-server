@@ -53,9 +53,10 @@ class PantryView(ViewSet):
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 
-class UserPantryView(generics.ListCreateAPIView):
+class UserPantryView(generics.RetrieveUpdateAPIView):
     serializer_class = PantrySerializer
 
-    def get_queryset(self):
+    def get_object(self):
         user_id = self.kwargs['user_id']
-        return Pantry.objects.filter(user__id=user_id)
+        pantry = Pantry.objects.get(user__id=user_id)
+        return pantry

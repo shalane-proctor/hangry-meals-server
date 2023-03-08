@@ -17,7 +17,7 @@ from rest_framework import routers
 from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
-from hangrymealsapi.views import check_user, register_user, UserView, IngredientView, UserIngredientView, PantryView, UserPantryView, PantryIngredientsView, RecipeIngredientsView, RecipeView, UserRecipeView, WeekView, UserWeekView, ByRecipeIngredientsView
+from hangrymealsapi.views import check_user, register_user, UserView, IngredientView, UserIngredientView, PantryView, UserPantryView, PantryIngredientsView, RecipeIngredientsView, RecipeView, UserRecipeView, WeekView, UserWeekView, ByRecipeIngredientsView, AllPantryIngredientsView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'user', UserView, 'user')
@@ -36,7 +36,7 @@ urlpatterns = [
     path('user-ingredient/<int:user_id>/',
          UserIngredientView.as_view(), name='user'),
 
-    path('user-pantry/<int:user_id>/',
+    path('user-pantry/<int:user_id>',
          UserPantryView.as_view(), name='user'),
 
     path('user-recipe/<int:user_id>/',
@@ -47,4 +47,7 @@ urlpatterns = [
     
     path('recipe-ingredients/<int:recipe_id>/',
          ByRecipeIngredientsView.as_view(), name='recipe'),
+    
+    path('pantry-ingredients/<int:pantry_id>/',
+         AllPantryIngredientsView.as_view(), name='pantry'),
 ]

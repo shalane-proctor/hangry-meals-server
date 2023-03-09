@@ -15,7 +15,7 @@ class WeekSerializer(serializers.ModelSerializer):
         model = Week
         fields = ('id', 'user', 'monday', 'tuesday',
                   'wednesday', 'thursday', 'friday', 'saturday', 'sunday')
-        depth = 1
+        depth = 2
 
 
 class WeekView(ViewSet):

@@ -59,7 +59,6 @@ class PantryIngredientsView(ViewSet):
         pantryingredient = PantryIngredient.objects.get(pk=pk)
         pantryingredient.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
-    
 
 class AllPantryIngredientsView(generics.ListCreateAPIView):
     serializer_class = PantryIngredientSerializer
@@ -67,4 +66,14 @@ class AllPantryIngredientsView(generics.ListCreateAPIView):
     def get_queryset(self):
         pantry_id = self.kwargs['pantry_id']
         return PantryIngredient.objects.filter(pantry__id=pantry_id)
-    
+class InPantryIngredientView(generics.RetrieveUpdateAPIView):
+    serializer_class = PantryIngredientSerializer
+
+    def get_object(self):
+        ingredient_id = self.kwargs['ingredient_id']
+        if ingredient_id is not None:
+            ingredient = PantryIngredient.objects.filter(
+                ingredient__id=ingredient_id).first()
+            return ingredient
+        else:
+            return Response(None, status=status.HTTP_204_NO_CONTENT)
